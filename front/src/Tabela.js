@@ -1,4 +1,4 @@
-export default ({vetor}) => {
+export default ({vetor,selecionar}) => {
     
     return (
         <table className="table">
@@ -15,13 +15,13 @@ export default ({vetor}) => {
 
             <tbody>
                 {
-                    vetor.map(iten=>{
+                    vetor.map((iten,k)=>{
                         return(
                             <tr>
                             <td>{iten.codigo}</td>
                             <td>{iten.nome}</td>
                             <td>{iten.marca}</td>
-                            <td> <button className="btn btn-success" >Selecionar</button> </td>
+                            <td> <button onClick={()=>{selecionar(k)}} className="btn btn-success" >Selecionar</button> </td>
         
                         </tr>
         
